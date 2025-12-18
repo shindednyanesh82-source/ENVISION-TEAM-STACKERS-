@@ -1,0 +1,9 @@
+# trigger redeploy
+streamlit
+joblib
+numpy
+Pillow
+google-generativeai
+twilio
+pandas
+scikit-learn
