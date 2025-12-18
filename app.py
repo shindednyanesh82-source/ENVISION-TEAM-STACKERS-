@@ -119,7 +119,7 @@ def apply_custom_theme():
     )
 
  # Load and display the image
-image = Image.open("h1.jpg")
+image = Image.open("h1 .jpg")
 st.image(image, caption="Your Image",use_container_width=True)
 def get_gemini_response(prompt):
     try:
