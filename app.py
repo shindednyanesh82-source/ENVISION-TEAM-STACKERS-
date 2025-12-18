@@ -119,7 +119,7 @@ def apply_custom_theme():
     )
 
  # Load and display the image
-image = Image.open("/content/h1.jpg")
+image = Image.open("h1.jpg")
 st.image(image, caption="Your Image",use_container_width=True)
 def get_gemini_response(prompt):
     try:
@@ -139,10 +139,10 @@ GEMINI_API_KEY = "AIzaSyDksYfC5E_CukbN7ajfwiFREQrrzI9p5-o"
 genai.configure(api_key=GEMINI_API_KEY)
 
 # Emergency Contact Details
-TWILIO_ACCOUNT_SID = "AC8e3795d546f72c37c9f619daa0755ce0"
-TWILIO_AUTH_TOKEN = "1887dcd36a846c4fd053ce742c520e50"
-TWILIO_PHONE_NUMBER = "+19788296514"  # Replace with Twilio number
-EMERGENCY_PHONE = " +918208697027"  # Replace with actual emergency contact number
+TWILIO_ACCOUNT_SID = "AC3952e4883acf0b3e9a5a41cf50254ced"
+TWILIO_AUTH_TOKEN = "9446fc5c61ebcd008e7127c7fd0e82c9"
+TWILIO_PHONE_NUMBER = "+15158540340"  # Replace with Twilio number
+EMERGENCY_PHONE = "+917822966398"  # Replace with actual emergency contact number
 
  
 
@@ -174,8 +174,8 @@ if st.button("🚨 Send Emergency Alert"):
 # Load the trained Random Forest model and scaler
 def load_model_and_scaler():
     try:
-        rf_model = joblib.load('/content/heart_risk_model.pkl')
-        scaler = joblib.load('/content/scaler.pkl')
+        rf_model = joblib.load('heart_risk_model.pkl')
+        scaler = joblib.load('scaler.pkl')
         return rf_model, scaler
     except FileNotFoundError as e:
         st.error(f"Error: Model or scaler file not found. Please ensure 'random_forest_model.pkl' and 'scaler.pkl' are in the correct directory.")
@@ -459,7 +459,7 @@ The dataset was collected through a combination of manual curation and publicly 
 
     # About Modules Section
     st.subheader("Modules Used")
-    image = Image.open("/content/istockphoto-1515913422-612x612.jpg")
+    image = Image.open("istockphoto-1515913422-612x612.jpg")
     st.image(image, caption="Your Image",use_container_width=True)
     st.write("""
     - RMultiple ML algorithms were tested and compared.
@@ -476,7 +476,7 @@ The model is capable of real-time predictions through a deployed web interface.
 elif page == "Symptoms Information":
     # Symptoms Information Section
     st.header("Heart Attack Symptoms")
-    image = Image.open("/content/190206-heart-attack-warning-signs-infographic-aha.webp")
+    image = Image.open("190206-heart-attack-warning-signs-infographic-aha.webp")
     st.image(image, caption="Your Image",use_container_width=True)
     
     st.write("""
